@@ -1,4 +1,4 @@
-package com.tutorial.crud.dto;
+package com.crud.dto;
 
 public class Mensaje {
     private String mensaje;
