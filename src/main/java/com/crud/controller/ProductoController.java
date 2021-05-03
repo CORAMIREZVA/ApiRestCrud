@@ -4,6 +4,7 @@ import com.crud.dto.Mensaje;
 import com.crud.dto.ProductoDto;
 import com.crud.entity.Producto;
 import com.crud.service.ProductoService;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,7 @@ public class ProductoController {
     @Autowired
     ProductoService productoService;
 
+    @ApiOperation("Muestra Lista Productos")
     @GetMapping("/lista")
     public ResponseEntity<List<Producto>> list(){
         List<Producto> list = productoService.list();
